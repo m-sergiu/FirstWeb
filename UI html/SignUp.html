@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/SignUp.css">
+    <title>Form Validator</title>
+</head>
+<body class="img-signup" style = background-image:url("../Images/wild-lion.jpg") >
+<button class="backbtn" onclick="goBack()">Back</button>
+    <div class="container">
+        <form id="form" class="form">
+            <h2>Register with us for a better experience </h2>
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Confirm password</label>
+                <input type="password" id="password2" placeholder="Enter password again">
+                <small>Error message</small>
+            </div>
+            <button>Submit</button>
+        </form>
+
+    </div>
+
+<script src="../Scripts/SignUp.js"></script>
+</body>
+</html>

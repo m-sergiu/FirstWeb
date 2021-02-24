@@ -1,0 +1,232 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+/*#be2edd*/
+:root {
+    --modal-duration: 1s;
+    --primary-color: #6a6ac8;
+    --secondary-color: #e10505;
+}
+h1{
+    font-size: 80px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+body.show-nav {
+    /* Width of nav */
+    transform: translateX(200px);
+}
+
+nav {
+    background-color: #5757c1;
+    border-right: 1px solid #000000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+nav .logo {
+    padding: 29px 0;
+    text-align: center;
+    background-color: #000033;
+}
+nav .logo img {
+    position: center;
+    border-right: 10px solid #e10505;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+nav ul {
+    padding: 5px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+nav ul li {
+    border-bottom: 2px solid #595959;
+    padding: 20px;
+}
+
+nav ul li:first-of-type {
+    border-top: 2px solid #595959;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 130%;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 30px 0;
+}
+
+button,
+input[type='submit'] {
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 12px ;
+}
+.btnsubmit{
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+}
+
+
+
+button:focus {
+    outline: none;
+}
+
+.toggle {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 160px;
+}
+.ctb-btn {
+    padding: 12px 30px;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+
+.container {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+    font-size: 20px;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-container.show-modal {
+    display: block;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    border-bottom: 1px solid #333;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-form div {
+    margin: 15px 0;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+    padding: 8px;
+    width: 100%;
+}
+
+.close-btn {
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
